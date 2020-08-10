@@ -136,27 +136,6 @@ protected:
          else {
             return left_child;
          }
-
-
-         //const Node* current = _find_min(p->_left);
-         //if (current == nullptr) {
-         //   return p;
-         //}
-         //else if (current->_is_deleted) {
-         //   const Node* right = _find_min(current->_right);
-         //   if (right == nullptr) {
-         //      return p;
-         //   }
-         //   else if (right->_is_deleted) {
-         //      return _find_min(right->_right);
-         //   }
-         //   else {
-         //      return right;
-         //   }
-         //}
-         //else {
-         //   return current;
-         //}
       }
    }
 
