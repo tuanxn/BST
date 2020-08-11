@@ -176,7 +176,7 @@ protected:
       else if (p->_data == elem) {
          if (p->_left == nullptr && p->_right == nullptr) {
             if (!p->_is_deleted)
-               _size--;
+               _size--; 
             _real_size--;
             delete p;
             p = nullptr;
@@ -204,15 +204,16 @@ protected:
             //p->_is_deleted = replacement->_is_deleted;
             _really_remove(p->_right, replacement);
             p->_is_deleted = false;
+            _size++;
          }
          return true;
       }
       else {
          if (elem < p->_data) {
-            return _remove(p->_left, elem);
+            return _really_remove(p->_left, elem);
          }
          else {
-            return _remove(p->_right, elem);
+            return _really_remove(p->_right, elem);
          }
       }
    }
